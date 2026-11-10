@@ -1,11 +1,11 @@
 class Rexurrect < Formula
   desc "Save Rex sessions and recreate them after the Rex server stops"
   homepage "https://github.com/tru2dagame/rexurrect"
-  version "0.4.0-tru.1"
+  version "0.4.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tru2dagame/rexurrect/releases/download/v0.4.0-tru.1/rexurrect-aarch64-apple-darwin.tar.xz"
-      sha256 "92f1daf28d60c2628b145dd39ff088aabb3bd8250406f45bede1d4beda56fa74"
+      url "https://github.com/tru2dagame/rexurrect/releases/download/v0.4.1/rexurrect-aarch64-apple-darwin.tar.xz"
+      sha256 "f10608dfee274ac0725a83ff6a773e3024d3a5531c625ba74c137e7dc0fe71fe"
     end
   end
   license "MIT"
@@ -38,7 +38,13 @@ class Rexurrect < Formula
 
     install_binary_aliases!
 
-    pkgshare.install "rexurrect.plugin.zsh"
+    # Homebrew will automatically install these, so we don't need to do that
+    doc_files = Dir["README.*", "readme.*", "LICENSE", "LICENSE.*", "CHANGELOG.*"]
+    leftover_contents = Dir["*"] - doc_files
+
+    # Install any leftover files in pkgshare; these are probably config or
+    # sample files.
+    pkgshare.install(*leftover_contents) unless leftover_contents.empty?
   end
 
   test do
