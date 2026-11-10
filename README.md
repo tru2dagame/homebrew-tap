@@ -18,6 +18,4 @@ brew upgrade tru2dagame/tap/rexurrect
 
 To hold the installed version, use `brew pin rexurrect`; unpin before an intentional upgrade.
 
-Existing manual-trial installations need the one-time migration documented in the [source repository](https://github.com/tru2dagame/rexurrect). Do not overwrite or delete existing snapshots/configuration.
-
 The Formula uses cargo-dist's standard release archive and the verified published SHA-256. The current bootstrap Formula installs only the executable and optional zsh recorder. New Formula updates are reviewed, signed and pushed with each chosen release; no upstream auto-sync is enabled. Current packages support Apple Silicon macOS.
