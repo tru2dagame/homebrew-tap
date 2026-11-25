@@ -1,11 +1,11 @@
 class Rexurrect < Formula
   desc "Save Rex sessions and recreate them after the Rex server stops"
   homepage "https://github.com/tru2dagame/rexurrect"
-  version "0.5.2"
+  version "0.5.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tru2dagame/rexurrect/releases/download/v0.5.2/rexurrect-aarch64-apple-darwin.tar.xz"
-      sha256 "4c660ccb97eb388291521b26c6864e137fb445b6ed8dc6e5cce44009b2ac5ab4"
+      url "https://github.com/tru2dagame/rexurrect/releases/download/v0.5.3/rexurrect-aarch64-apple-darwin.tar.xz"
+      sha256 "7617512ff44a26165758c3e88c51f7155a4fe9c03f9a9ad85ac45091e0c6d578"
     end
   end
   license "MIT"
